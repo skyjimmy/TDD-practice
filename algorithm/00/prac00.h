@@ -6,6 +6,8 @@ int tripleMax(int x, int y, int z);
 int max_arr(int arr[], int arr_len);
 void swap(int* a, int* b);
 void swap_arr(int arr[], int a, int b);
+void right_rotate(int arr[], int s, int e);
+void left_rotate(int arr[], int s, int e);
 #endif
 
 

@@ -45,3 +45,41 @@ TEST(swaparrTest, changeValue)
 	EXPECT_EQ(1, arr[0]);
 	EXPECT_EQ(2, arr[1]);
 }
+
+TEST(rightRotateTest, rightRotate1)
+{
+	int arr[] = { 1,2,3,4,5,6 };
+	right_rotate(arr, 1, 3);
+	EXPECT_EQ(4, arr[1]);
+	EXPECT_EQ(2, arr[2]);
+	EXPECT_EQ(3, arr[3]);
+}
+
+TEST(rightRotateTest, rightRotate2)
+{
+	int arr[] = { 1,2,3,4,5,6 };
+	right_rotate(arr, 0, 3);
+	EXPECT_EQ(4, arr[0]);
+	EXPECT_EQ(1, arr[1]);
+	EXPECT_EQ(2, arr[2]);
+	EXPECT_EQ(3, arr[3]);
+}
+
+TEST(leftRotateTest, leftRotate1)
+{
+	int arr[] = { 1,2,3,4,5,6 };
+	left_rotate(arr, 1, 3);
+	EXPECT_EQ(3, arr[1]);
+	EXPECT_EQ(4, arr[2]);
+	EXPECT_EQ(2, arr[3]);
+}
+
+TEST(leftRotateTest, leftRotate2)
+{
+    int arr[] = { 1,2,3,4,5,6 };
+	left_rotate(arr, 0, 3);
+	EXPECT_EQ(2, arr[0]);
+	EXPECT_EQ(3, arr[1]);
+	EXPECT_EQ(4, arr[2]);
+	EXPECT_EQ(1, arr[3]);
+}

@@ -42,3 +42,28 @@ void swap_arr(int arr[], int a, int b)
 	arr[a] = arr[b];
 	arr[b] = temp; 
 }
+
+void right_rotate(int arr[], int s, int e)
+{
+	int temp = arr[e];
+
+	for(int i = e; i > s; i--)
+	{
+		arr[i] = arr[i-1];
+	}
+
+	arr[s] = temp; 
+}
+
+void left_rotate(int arr[], int s, int e)
+{
+	int temp = arr[s];
+
+	for(int i = s; i < e; i++)
+	{
+		arr[i] = arr[i+1];
+	}
+
+	arr[e] = temp;
+
+}
