@@ -35,3 +35,10 @@ void swap(int* a, int* b)
 	*a = *b;
 	*b = temp;
 }
+
+void swap_arr(int arr[], int a, int b)
+{
+	int temp = arr[a];
+	arr[a] = arr[b];
+	arr[b] = temp; 
+}

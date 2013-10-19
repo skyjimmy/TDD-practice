@@ -5,6 +5,7 @@ int max(int x, int y);
 int tripleMax(int x, int y, int z);
 int max_arr(int arr[], int arr_len);
 void swap(int* a, int* b);
+void swap_arr(int arr[], int a, int b);
 #endif
 
 

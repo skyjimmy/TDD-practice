@@ -37,3 +37,11 @@ TEST(swapTest, changedValue)
 	EXPECT_EQ(3, a);
 	EXPECT_EQ(2, b);
 }
+
+TEST(swaparrTest, changeValue)
+{
+	int arr[] = {2,1,3,4,5};
+	swap_arr(arr, 0, 1);
+	EXPECT_EQ(1, arr[0]);
+	EXPECT_EQ(2, arr[1]);
+}
