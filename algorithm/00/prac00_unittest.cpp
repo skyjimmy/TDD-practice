@@ -83,3 +83,22 @@ TEST(leftRotateTest, leftRotate2)
 	EXPECT_EQ(4, arr[2]);
 	EXPECT_EQ(1, arr[3]);
 }
+
+TEST(timesRotateTest, timeRotate)
+{
+	int arr[] = { 1,2,3,4,5,6,7 };
+	times_rotate(arr, 1, 7);
+	EXPECT_EQ(7, arr[0]);
+	EXPECT_EQ(1, arr[1]);
+	EXPECT_EQ(2, arr[2]); 
+}
+
+TEST(timRoatateTest, timeRotate2)
+{
+	int arr[] = { 1,2,3 };
+	times_rotate(arr, 2, 3);
+	EXPECT_EQ(2, arr[0]);
+	EXPECT_EQ(3, arr[1]);
+	EXPECT_EQ(1, arr[2]);
+}
+

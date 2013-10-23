@@ -8,6 +8,7 @@ void swap(int* a, int* b);
 void swap_arr(int arr[], int a, int b);
 void right_rotate(int arr[], int s, int e);
 void left_rotate(int arr[], int s, int e);
+void times_rotate(int arr[], int k, int length);
 #endif
 
 

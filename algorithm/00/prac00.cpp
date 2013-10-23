@@ -64,6 +64,29 @@ void left_rotate(int arr[], int s, int e)
 		arr[i] = arr[i+1];
 	}
 
-	arr[e] = temp;
+	arr[e] = temp; 
+}
 
+void times_rotate(int arr[], int k, int length)
+{
+	int temp[k];
+
+	int count = k-1;
+	int curArrCnt = length-1;
+
+	for(int i = 0; i < k; i++)
+	{ 
+		temp[count] = arr[curArrCnt - i];
+		count--;
+	}
+
+	for(int i = curArrCnt; i > 0; i--)
+	{
+		arr[i] = arr[i - k];
+	}
+
+	for(int i = 0; i < k; i++)
+	{
+		arr[i] = temp[i];
+	}
 }
