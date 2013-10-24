@@ -1,4 +1,5 @@
 #include "prac00.h"
+#include <stdio.h>
 
 int min(int x, int y)
 {
@@ -89,4 +90,34 @@ void times_rotate(int arr[], int k, int length)
 	{
 		arr[i] = temp[i];
 	}
+}
+
+static char buf[255];
+const char* DeQueueArray(int arr[], int len, int* head, int* tail)
+{
+	if(*tail == -1)
+	{
+		return "queue empty!";
+	} 
+
+	sprintf(buf, "%d", arr[(*head)]); 
+	(*head)++;
+
+	return buf;
+}
+
+const char* QueueArray(int arr[], int len, int* head, int* tail, int inNum)
+{	
+	if((*tail) > len)
+	{ 
+		return "queue full!";
+	}
+	else if((*tail) <= len && (*tail) >= -1)
+	{ 
+		(*tail)++;
+		arr[*tail] = inNum;
+		sprintf(buf, "[%d]", inNum);
+		return buf;
+	}
+	return "";
 }

@@ -102,3 +102,17 @@ TEST(timRoatateTest, timeRotate2)
 	EXPECT_EQ(1, arr[2]);
 }
 
+TEST(QueueArrayTest, isEmpty)
+{
+	int arr[8];
+	int head = 0;
+	int tail = -1;
+	EXPECT_EQ(0, strcmp(DeQueueArray(arr, 8, &head, &tail), "queue empty!"));
+	tail = 9;
+	EXPECT_EQ(0, strcmp(QueueArray(arr, 8, &head, &tail, 1), "queue full!"));
+	tail = -1;
+	EXPECT_EQ(0, strcmp(QueueArray(arr, 8, &head, &tail, 1), "[1]"));
+	EXPECT_EQ(0, tail);
+	EXPECT_EQ(0, strcmp(DeQueueArray(arr, 8, &head, &tail), "1"));
+	EXPECT_EQ(1, head); 
+}
